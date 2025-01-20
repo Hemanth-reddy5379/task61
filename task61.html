@@ -1,0 +1,29 @@
+<html>
+<h1>JavaScript Popup Boxes</h1>
+<body>
+    <button onclick="displaydate()">Display date</button>
+    <input type="text" id="date">
+    <button onclick="displayfact()">Display factorial</button>
+    <script>
+        function displaydate() {
+            const todayDate = new Date().toLocaleDateString();
+            document.getElementById("date").value = todayDate;
+        }
+
+        function displayfact() {  
+            var number = prompt("Enter the number: ");
+            if (number < 0) {
+                alert("Please enter a valid non-negative number.");
+                
+            }
+
+            var factorial = 1;
+            for (var i = number; i >= 1; i--) {
+                factorial *= i;
+            }
+
+            alert("The factorial of " + number + " is " + factorial);
+        }
+    </script>
+</body>
+</html>
